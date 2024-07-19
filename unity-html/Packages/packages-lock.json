@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "cdf88c6a6ac8c9b7e6e5d3c0a360a4af29641c24"
+    },
     "com.unity.2d.animation": {
       "version": "9.0.3",
       "depth": 1,
@@ -143,7 +150,7 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.24",
+      "version": "3.0.31",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -255,6 +262,13 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "net.gree.unity-webview": {
+      "version": "https://github.com/gree/unity-webview.git?path=/dist/package",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "4e94128d42cc5d013df6f5ca49dc1ba07a09a115"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
