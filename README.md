@@ -1,7 +1,8 @@
 # Unity✕MicroCMSお知らせサンプル
 MicroCMSで作成したコンテンツをUnityで閲覧することができるサンプルプロジェクトです。
 ![スクリーンショット 2024-07-19 16 39 31](https://github.com/user-attachments/assets/0de389df-fbfc-40ec-83b2-b3e38ffcf5c6)
-![スクリーンショット 2024-07-19 16 39 39](https://github.com/user-attachments/assets/2c691179-dc18-41b5-972e-36786b9f39d3)
+![スクリーンショット 2024-07-19 23 25 35](https://github.com/user-attachments/assets/ba4cf2bd-9544-4a9b-ac32-a26a2f74edb0)
+
 
 ## 動作環境
 ### Unity側
