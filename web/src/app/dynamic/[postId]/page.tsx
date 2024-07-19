@@ -24,18 +24,16 @@ export default async function DynamicDetailPage({
 }) {
   const post = await GetDetail(postId);
 
-  // ページの生成された時間を取得
-  const time = new Date().toLocaleString();
-
   if (!post) {
     notFound();
   }
 
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <h2>{time}</h2>
-      <div>{parse(post.content)}</div>
+    <div className="max-w-[1024px] mx-auto my-10">
+      <h1 className="text-2xl font-bold text-center py-5">{post.title}</h1>
+      <div className="border rounded-xl shadow-lg p-10">
+        {parse(post.content)}
+      </div>
     </div>
   );
 }

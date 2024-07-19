@@ -21,7 +21,10 @@ export default async function Home() {
       <ul className="p-5">
         {contents.map((post) => {
           return (
-            <li key={post.id} className="border shadow-lg text-center rounded">
+            <li
+              key={post.id}
+              className="border shadow-lg text-center rounded my-3"
+            >
               <Link href={`/dynamic/${post.id}`} className="block py-3">
                 {post.title}
               </Link>
