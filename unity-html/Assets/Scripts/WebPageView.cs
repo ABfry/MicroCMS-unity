@@ -14,7 +14,6 @@ public class WebPageView : MonoBehaviour
     
     [SerializeField]
     private Button _forwardButton;
-
     public Button ForwardButton => _forwardButton;
     
     [SerializeField] private int _marginT = 100, _marginR = 100, _marginB = 100, _marginL = 100;
