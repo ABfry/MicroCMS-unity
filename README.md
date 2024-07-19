@@ -6,17 +6,23 @@ MicroCMSで作成したコンテンツをUnityで閲覧することができる�
 ## 動作環境
 ### Unity側
 Unity 2022.3.9f1
+
 UniRx 7.1.0
+
 unity-webview 1.0.0 [https://github.com/gree/unity-webview](https://github.com/gree/unity-webview)
 
 ### Web側
 Node.js ^20
+
 Next.js ^14
+
 next-micro-cms 0.1.0
 
 
 ## ローカル環境での実行方法
 MicroSMCに関しては[https://document.microcms.io/manual/signup](https://document.microcms.io/manual/signup)を参照。
+
+
 ### Unity
 "unity-html"ディレクトリをプロジェクトとして開く
 
