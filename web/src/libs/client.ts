@@ -23,12 +23,9 @@ export const Client = createClient({
 
 export const GetList = async (queries?: MicroCMSQueries) => {
   const listData = await Client.getList<Blog>({
-    endpoint: "blogs",
+    endpoint: "news",
     queries,
   });
-
-  //遅延、データ取得を目視しやすいように
-  // await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return listData;
 };
@@ -38,12 +35,10 @@ export const GetDetail = async (
   queries?: MicroCMSQueries
 ) => {
   const detailData = await Client.getListDetail<Blog>({
-    endpoint: "blogs",
+    endpoint: "news",
     contentId,
     queries,
   });
-
-  // await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return detailData;
 };
