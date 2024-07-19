@@ -1,5 +1,4 @@
 
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UniRx;
@@ -39,10 +38,15 @@ public class WebPageView : MonoBehaviour
         _webViewObject.bitmapRefreshCycle = 1;
 #endif
         
+        // マージンの設定
         _webViewObject.SetMargins(_marginL, _marginT, _marginR, _marginB);
+        
+        // スクロールの有効化
+        _webViewObject.EvaluateJS("window.scrollTo(0, document.body.scrollHeight)");
+        
         _webViewObject.SetVisibility(true);
         
-        _webViewObject.LoadURL("https://www.google.co.jp");
+        _webViewObject.LoadURL(url);
     }
     
     public void GoBack()

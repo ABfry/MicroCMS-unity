@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _view: {fileID: 1201332817}
-  _url: https://www.google.co.jp
+  _url: https://rigpp.sakura.ne.jp/wp/
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
