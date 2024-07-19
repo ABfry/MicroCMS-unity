@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UniRx;
+using System.Text.RegularExpressions;
 
 public class WebPagePresenter : MonoBehaviour
 {
@@ -9,7 +10,14 @@ public class WebPagePresenter : MonoBehaviour
     
     private void Start()
     {
-        _view.Initialize(_url);
+        if (JudgeIsUrlValid(_url))
+        {
+            _view.Initialize(_url);
+        }else
+        {
+            Debug.LogError("URLが正しくないよ");
+        }
+        
 
         _view.BackButton.OnClickAsObservable()
             .Subscribe(_ =>
@@ -22,5 +30,12 @@ public class WebPagePresenter : MonoBehaviour
             {
                 _view.GoForward();
             }).AddTo(this);
+    }
+    
+    private string PATTERN = @"https?://[\w!\?/\+\-_~=;\.,\*&@#\$%\(\)'\[\]]+"; //URLを表す正規表現
+    private bool JudgeIsUrlValid(string url)
+    {
+        bool result = Regex.IsMatch(url, PATTERN);
+        return result;
     }
 }
