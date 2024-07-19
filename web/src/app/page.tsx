@@ -15,13 +15,16 @@ export default async function Home() {
   }
 
   return (
-    <div>
-      <h1>{time}</h1>
-      <ul>
+    <div className="my-10 max-w-96 mx-auto">
+      <h1 className="text-3xl font-bold text-center">お知らせ</h1>
+      <p className="text-center">{time}時点</p>
+      <ul className="p-5">
         {contents.map((post) => {
           return (
-            <li key={post.id}>
-              <Link href={`/dynamic/${post.id}`}>{post.title}</Link>
+            <li key={post.id} className="border shadow-lg text-center rounded">
+              <Link href={`/dynamic/${post.id}`} className="block py-3">
+                {post.title}
+              </Link>
             </li>
           );
         })}
