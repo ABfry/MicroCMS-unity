@@ -7,7 +7,7 @@ MicroCMSで作成したコンテンツをUnityで閲覧することができる�
 ### Unity側
 Unity 2022.3.9f1
 
-UniRx 7.1.0
+UniRx 7.1.0 [https://assetstore.unity.com/packages/tools/integration/unirx-reactive-extensions-for-unity-17276?locale=ja-JP](https://assetstore.unity.com/packages/tools/integration/unirx-reactive-extensions-for-unity-17276?locale=ja-JP)
 
 unity-webview 1.0.0 [https://github.com/gree/unity-webview](https://github.com/gree/unity-webview)
 
