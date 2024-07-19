@@ -12,9 +12,11 @@ export type Blog = {
   eyeCatch: MicroCMSImage;
 } & MicroCMSDate;
 
-if (!process.env.NEXT_PUBLIC_CMS_URL || !process.env.NEXT_PUBLIC_CMS_API_KEY) {
-  throw new Error("Please set NEXT_PUBLIC_CMS_URL and NEXT_PUBLIC_CMS_API_KEY");
+if (!process.env.NEXT_PUBLIC_CMS_URL || !process.env.NEXT_PUBLIC_CMS_API_KEY || !process.env.NEXT_PUBLIC_CMS_CATEGORY) {
+  throw new Error("Please set NEXT_PUBLIC_CMS_URL and NEXT_PUBLIC_CMS_API_KEY an NEXT_PUBLIC_CMS_CATEGORY");
 }
+
+const category = process.env.NEXT_PUBLIC_CMS_CATEGORY;
 
 export const Client = createClient({
   serviceDomain: process.env.NEXT_PUBLIC_CMS_URL,
@@ -23,7 +25,7 @@ export const Client = createClient({
 
 export const GetList = async (queries?: MicroCMSQueries) => {
   const listData = await Client.getList<Blog>({
-    endpoint: "news",
+    endpoint: category,
     queries,
   });
 
@@ -35,7 +37,7 @@ export const GetDetail = async (
   queries?: MicroCMSQueries
 ) => {
   const detailData = await Client.getListDetail<Blog>({
-    endpoint: "news",
+    endpoint: category,
     contentId,
     queries,
   });
