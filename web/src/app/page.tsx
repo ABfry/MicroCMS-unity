@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { GetList } from "@/libs/client";
 import Link from "next/link";
 
@@ -23,7 +22,7 @@ export default async function Home() {
           return (
             <li
               key={post.id}
-              className="border shadow-lg text-center rounded my-3"
+              className="border shadow-lg text-center rounded my-3 hover:bg-gray-200"
             >
               <Link href={`/dynamic/${post.id}`} className="block py-3">
                 {post.title}
