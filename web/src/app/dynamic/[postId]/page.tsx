@@ -1,10 +1,10 @@
-import { GetDetail, GetList } from "@/libs/client";
+import { GetList } from "@/libs/client";
 import dynamic from "next/dynamic";
 
 // キャッシュを利用しない
 export const revalidate = 0;
 
-export const TagLabels = dynamic(() => import("../Pagecontents"), {
+export const SkeletonPage = dynamic(() => import("../Pagecontents"), {
   ssr: false,
   loading: () => (
     <div className="max-w-[1024px] mx-auto my-10 h-screen">
@@ -33,9 +33,5 @@ export default async function DynamicDetailPage({
 }: {
   params: { postId: string };
 }) {
-  return (
-    <>
-      <TagLabels params={{ postId }} />
-    </>
-  );
+  return <SkeletonPage params={{ postId }} />;
 }
